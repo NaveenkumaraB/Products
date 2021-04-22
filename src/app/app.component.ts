@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'Products Details';
+  title = 'Mobile Products Details';
   constructor() {
   }
 
