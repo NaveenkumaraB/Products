@@ -1,0 +1,41 @@
+
+<style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+</style>
+
+<h1>Poduct Details</h1>
+Product Name
+<input type="text" [(ngModel)]="name">
+<br>
+<br>
+Price  
+<input type="text" [(ngModel)]="price">
+<br>
+<br>
+Description
+<input type="text" [(ngModel)]="description">
+<br>
+<button type="button" (click)="saveProduct()">SAVE</button>
+<br>
+<br>
+<br>
+<button type="button" (click)="getProducts()">GET</button>
+<br>
+<table class="table-latitude">
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+    </thead>
+    <tr *ngFor='let pr of products'>
+        <td >{{pr.id}}  </td>
+        <td>{{pr.name}}</td>
+        <td>{{pr.description}}</td>
+        <td>{{pr.price}}</td>
+        <td><button type="button" value="{{pr.id}}" (click)="deleteProduct($event)">delete</button></td>
+    </tr>
+</table>
